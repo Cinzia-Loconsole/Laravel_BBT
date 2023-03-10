@@ -8,26 +8,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 <!-- GOOGLE FONT -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Didact+Gothic&display=swap" rel="stylesheet">
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/x-icon" href="/img/bazinga.png">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/img/bazinga.png">
 
-  <!-- CSS COSTUM -->
-  <link rel="stylesheet" href="/css/style.css">
-
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body class="vh-100">
+  <body>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg mb-4" style="background-color: rgba(255, 228, 196, 0.795);">
         
         <div class="container-fluid">
 
-          <!-- primo logo -->
+          <!-- LOGO -->
           <a class="navbar-brand" href="/">
             <img class=" ms-3 logo" src="/img/logo.png" alt="" srcset="">
           </a>
@@ -47,45 +45,52 @@
                 <a class="nav-link" href="/workers-page">Chi siamo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/gadget">I nostri gadget</a>
+                <a class="nav-link" href="/gadgets">I nostri gadget</a>
               </li>
             </ul>
            </div>
         </div>
       </nav>
+
 <!-- FINE NAVBAR -->
 
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-md-6 my-3 d-flex justify-content-center">
-                <h1 class="fw-bold">{{$worker['name']}}</h1>
+      <!-- I NOSTRI GADGET -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 my-3 d-flex justify-content-center align-items-center">
+                <h1>I nostri gadget</h1>
             </div>
         </div>
     </div>
 
-
-    
+    <!-- CARD GADGET -->
     <div class="container-fluid">
         <div class="row justify-content-center">
+        @foreach($gadgets as $gadget)
             <div class="col-12 col-md-4 d-flex justify-content-center my-3">
+
 <div class="card" style="width: 18rem;">
-    <img src="{{$worker['img']}}" class="card-img-top" alt="{{$worker['name']}}">
-        <div class="card-body">
-    <h5 class="card-title">{{$worker['name']}}</h5>
-    <p class="card-text">{{$worker['surname']}}</p>
-    <p>{{$worker['age']}} anni </p>
-    <a href="/workers-page" class="btn btn-primary">Torna indietro</a>
+  <div class="d-flex justify-content-center my-3">
+    <img src="{{$gadget['img']}}" class="card-img-top img-fluid" alt="{{$gadget['name']}}">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{$gadget['name']}}</h5>
+    <p class="card-text">{{$gadget['price']}}€</p>
+    <a href="{{route('gadget-detail',['id'=>$gadget['id']])}}" class="btn btn-primary">Dettagli</a>
 
 </div>
         </div>
         
             </div>
+            @endforeach
         </div>
     </div>
+<!-- FINE CARD GADGET -->
 
 
-
+<!-- SCIPT MAIN.JS -->
     <script src="/js/main.jss"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
