@@ -15,15 +15,19 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/x-icon" href="/img/bazinga.png">
 
+<!-- FONTAWESOME CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+
   <!-- CSS COSTUM -->
   <link rel="stylesheet" href="/css/style.css">
 
 
   </head>
-  <body class="vh-100">
+  <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg mb-4" style="background-color: rgba(255, 228, 196, 0.795);">
+  <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 228, 196, 0.795);">
         
         <div class="container-fluid">
 
@@ -33,11 +37,9 @@
           </a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            
-            <i class="fa-solid fa-robot"></i>
-            
-
+        <img class="toggler" src="/img/toggler.png" alt="" srcset="">
           </button>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -55,7 +57,8 @@
       </nav>
 <!-- FINE NAVBAR -->
 
-    <div class="container">
+<div class="container-fluid bg vh-100">
+<div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 col-md-6 my-3 d-flex justify-content-center">
                 <h1 class="fw-bold">{{$worker['name']}}</h1>
@@ -82,6 +85,8 @@
             </div>
         </div>
     </div>
+</div>    
+
 
 
 

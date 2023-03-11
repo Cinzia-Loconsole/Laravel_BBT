@@ -1,22 +1,51 @@
-body{
+.bg{
     background: linear-gradient(200deg, rgba(230, 137, 137, 0.535), rgba(249, 240, 240, 0.855)), url(/img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     font-family: 'Didact Gothic', sans-serif;
     
 }
+
+.btn{
+    border: 2px rgb(10, 10, 10) solid;
+    border-radius: 20px;
+    background-color: #baa3a3b5;
+}
+
+.btn:hover{
+    border: 2px rgb(36, 35, 35) solid;
+    border-radius: 20px;
+    background-color: #e2c5c5ba;
+}
+/* @media (max-width: 480px) {
+    body {
+        background-image: url(/img/bg.jpg);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background-image: url(/img/bg.jpg);
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+	    background-image: url(/img/bg.jpg);
+   }
+} */
 
 h1{
     font-family: 'Anton', sans-serif;
 }
 
 /* SFONDO WELCOME PAGE */
-.bg-welcome{
+.header{
     background-image: url(/img/bg-welcome.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
 }
 
 .logo{
@@ -25,7 +54,13 @@ h1{
 
 /* RENDO IMMAGINI DELLA STESSA DIMENSIONE */
 .img-fluid{
-        width: 80%;
-        height: 15vw;
+        width: 92%;
+        height: 30vw;
         object-fit: cover;
+}
+
+
+/* NAVBAR */
+.toggler{
+    width:30px;
 }
