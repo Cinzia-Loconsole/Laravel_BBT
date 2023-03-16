@@ -45,10 +45,10 @@
                   <a class="nav-link" aria-current="page" href="/">Home</a>
                 </li>
               <li class="nav-item">
-                <a class="nav-link" href="/workers-page">Chi siamo</a>
+                <a class="nav-link" href="{{route('workersPage')}}">Chi siamo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/gadgets">I nostri gadget</a>
+                <a class="nav-link" href="{{route('gadgetsPage')}}">I nostri gadget</a>
               </li>
             </ul>
            </div>

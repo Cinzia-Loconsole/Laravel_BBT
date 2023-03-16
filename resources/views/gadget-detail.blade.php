@@ -80,7 +80,7 @@
     <h5 class="card-title">{{$gadget['name']}}</h5>
     <p class="card-text">{{$gadget['price']}} €</p>
     <p>{{$gadget['description']}} </p>
-    <a href="/gadgets" class="btn">Torna indietro</a>
+    <a href="{{route('gadgetsPage')}}" class="btn">Torna indietro</a>
 
 </div>
         </div>
